@@ -108,7 +108,7 @@ define({
 ```
 
 When you run ```grunt depgraph```, this will generate this image
-<img src="http://www.team-bhp.com/forum/attachments/shifting-gears/1033178d1356977973-official-non-auto-image-thread-_mg_0143.jpg">
+<img src="https://raw.github.com/nsisodiya/grunt-depgraph/master/demo/depGraph.png">
  
 ### Run the demo
 
