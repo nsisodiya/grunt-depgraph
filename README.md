@@ -1,4 +1,4 @@
-# grunt-depgraph [![Build Status](https://travis-ci.org/nsisodiya/grunt-depgraph.png?branch=master)](https://travis-ci.org/nsisodiya/grunt-depgraph)
+# grunt-depgraph
 
 > Generate module to module dependancy graph and resolve dependancy at build time
 
@@ -27,8 +27,6 @@ _Run this task with the `grunt depgraph` command._
 
 
 ### Settings
-
-There are a number of options available. Please review the [minimatch options here](https://github.com/isaacs/minimatch#options). As well as some additional options as follows:
 
 #### files
 Type: `Array`
@@ -108,13 +106,17 @@ define({
 });
 
 ```
+
+When you run ```grunt depgraph```, this will generate this image
+<img src="http://www.team-bhp.com/forum/attachments/shifting-gears/1033178d1356977973-official-non-auto-image-thread-_mg_0143.jpg">
+ 
 ### Run the demo
 
 ```bash
 sudo apt-get install graphviz
 git clone https://github.com/nsisodiya/grunt-depgraph.git
 cd grunt-depgraph/demo
-grunt
+grunt depgraph
 
 ```
 This will generate "depGraph.png" 
