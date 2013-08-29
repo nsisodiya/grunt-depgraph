@@ -56,9 +56,9 @@ depgraph:{
 		files : ['src/js/modules/a.js',
 				'src/js/modules/b.js',
 				'src/js/modules/c.js']
-		dotFile: "build/depGraph.dot",
-		outputFilePath: "build/depGraph",
-		outputFilesExt: ["png","pdf"],
+		dotFile: 'build/depGraph.dot',
+		outputFilePath: 'build/depGraph',
+		outputFilesExt: ['png','pdf'],
 	}
 },
 ```
@@ -66,9 +66,9 @@ depgraph:{
 ```js
 //src/js/modules/a.js
 define({
-	"fileName" : "MyLib",
-	"dependsOn" : [],
-	"layer" : "Lib Layer"
+	'fileName' : 'MyLib',
+	'dependsOn' : [],
+	'layer' : 'Lib Layer'
 }).content(function(){
 	return {
 		add : function(a,b){
@@ -86,11 +86,11 @@ define({
 ```js
 //src/js/modules/b.js
 define({
-	"fileName" : "AddModule",
-	"dependsOn" : ["MyLib"],
-	"layer" : "Module Layer"
+	'fileName' : 'AddModule',
+	'dependsOn' : ['MyLib'],
+	'layer' : 'Module Layer'
 }).content(function(Lib){
-	console.log("2 + 3 = " + Lib.add(2,3));
+	console.log('2 + 3 = ' + Lib.add(2,3));
 });
 
 ```
@@ -98,17 +98,17 @@ define({
 ```js
 //src/js/modules/c.js
 define({
-	"fileName" : "SubModule",
-	"dependsOn" : ["MyLib"],
-	"layer" : "Module Layer"
+	'fileName' : 'SubModule',
+	'dependsOn' : ['MyLib'],
+	'layer' : 'Module Layer'
 }).content(function(Lib){
-	console.log("2 - 3 = " + Lib.sub(2,3));
+	console.log('2 - 3 = ' + Lib.sub(2,3));
 });
 
 ```
 
 When you run ```grunt depgraph```, this will generate this image
-<img src="https://raw.github.com/nsisodiya/grunt-depgraph/master/demo/depGraph.png">
+<img src='https://raw.github.com/nsisodiya/grunt-depgraph/master/demo/depGraph.png'>
  
 ### Run the demo
 
@@ -119,7 +119,7 @@ cd grunt-depgraph/demo
 npm install grunt
 grunt depgraph
 ```
-This will generate "depGraph.png" 
+This will generate 'depGraph.png' 
 ### FAQs
 
 #### What is the purpose of depgraph?
