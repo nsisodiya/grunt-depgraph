@@ -40,7 +40,7 @@
   "readmeFilename": "README.md",
   "_id": "grunt-depgraph@0.0.1",
   "dist": {
-    "shasum": "?"
+    "shasum": "8e29e39c9d8800d58fb802f3d8b709efe4f5f15b"
   },
   "_from": "grunt-depgraph@~0.0.1",
   "_resolved": "https://registry.npmjs.org/grunt-depgraph/-/grunt-depgraph-0.0.1.tgz"
