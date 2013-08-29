@@ -22,7 +22,7 @@ grunt.loadNpmTasks('grunt-depgraph');
 
 
 
-## Watch task
+## depgraph task
 _Run this task with the `grunt depgraph` command._
 
 
