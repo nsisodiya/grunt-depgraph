@@ -116,8 +116,8 @@ When you run ```grunt depgraph```, this will generate this image
 sudo apt-get install graphviz
 git clone https://github.com/nsisodiya/grunt-depgraph.git
 cd grunt-depgraph/demo
+npm install grunt
 grunt depgraph
-
 ```
 This will generate "depGraph.png" 
 ### FAQs
