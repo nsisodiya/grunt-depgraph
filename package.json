@@ -1,0 +1,47 @@
+{
+  "name": "grunt-depgraph",
+  "description": "Generate Dependancy Graph using graphviz",
+  "version": "0.0.1",
+  "homepage": "https://github.com/nsisodiya/grunt-depgraph",
+  "author": {
+    "name": "Narendra Sisodiya",
+    "url": "https://github.com/nsisodiya"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nsisodiya/grunt-depgraph.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nsisodiya/grunt-depgraph/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/nsisodiya/grunt-depgraph/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.0"
+  },
+  "keywords": [
+    "gruntplugin",
+    "depgraph"
+  ],
+  "contributors": [],
+  "readme": "# grunt-depgraph [![Build Status](https://travis-ci.org/nsisodiya/grunt-depgraph.png?branch=master)](https://travis-ci.org/nsisodiya/grunt-depgraph)\n\n> Run predefined tasks whenever watched file patterns are added, changed or deleted.\n\n\n\n## Getting Started\nThis plugin requires Grunt `~0.4.0`\n\nIf you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:\n\n```shell\nnpm install grunt-depgraph --save-dev\n```\n\nOnce the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:\n\n```js\ngrunt.loadNpmTasks('grunt-depgraph');\n```\n\n\n\n\n## Watch task\n_Run this task with the `grunt depgraph` command._\n\n\n### Settings\n\nThere are a number of options available. Please review the [minimatch options here](https://github.com/isaacs/minimatch#options). As well as some additional options as follows:\n\n#### files\nType: `Array`\n\nThis defines what file patterns this task will watch. It will be an array of files.\n\n#### dotFile\nType: `String`\n\nimtermediate generated dot file.\n\n#### outputFilePath\nType: `String`\n\npath of the output file.\n\n#### outputFilesExt\nType: `Array`\n\ntypeof output files. Example png, pdf\n\n\nExample:\n```js\ndepgraph:{\n\toptions:{\n\t\tfiles : ['src/js/modules/a.js',\n\t\t\t\t'src/js/modules/b.js',\n\t\t\t\t'src/js/modules/c.js']\n\t\tdotFile: 'build/depGraph.dot',\n\t\toutputFilePath: 'build/depGraph',\n\t\toutputFilesExt: ['png','pdf'],\n\t}\n},\n```\n\n```js\n//src/js/modules/a.js\ndefine({\n\t'fileName' : 'MyLib',\n\t'dependsOn' : [],\n\t'layer' : 'Lib Layer'\n}).content(function(){\n\treturn {\n\t\tadd : function(a,b){\n\t\t\treturn a+b;\n\t\t},\n\t\tsub : function(a,b){\n\t\t\treturn a-b;\n\t\t}\n\t}\n});\n\n```\n\n\n```js\n//src/js/modules/b.js\ndefine({\n\t'fileName' : 'AddModule',\n\t'dependsOn' : ['MyLib'],\n\t'layer' : 'Module Layer'\n}).content(function(Lib){\n\tconsole.log('2 + 3 = ' + Lib.add(2,3));\n});\n\n```\n\n```js\n//src/js/modules/c.js\ndefine({\n\t'fileName' : 'SubModule',\n\t'dependsOn' : ['MyLib'],\n\t'layer' : 'Module Layer'\n}).content(function(Lib){\n\tconsole.log('2 - 3 = ' + Lib.sub(2,3));\n});\n\n```\n\n### FAQs\n\n#### What is the purpose of depgraph?\nas you can see the example, this will generate depgraph!\nimages your codebase has 1000 javascript files, you do not want to load all 1000 files, you only want to load 5 modules to your homepage and these 5 modules has some dependancy, then you can use this tool to generate a list of files which will be needed to load homepage\n\n\n\n## Release History\n\n * 2013-08-29   v0.0.1   Intial base version.\n",
+  "readmeFilename": "README.md",
+  "_id": "grunt-depgraph@0.0.1",
+  "dist": {
+    "shasum": "?"
+  },
+  "_from": "grunt-depgraph@~0.0.1",
+  "_resolved": "https://registry.npmjs.org/grunt-depgraph/-/grunt-depgraph-0.0.1.tgz"
+}
